@@ -1,9 +1,29 @@
+
+Seleccione un autor en el menú izquierdo para empezar
 <div class="authors">
   <h1>Authors</h1>
   <div class="menu-authors">
     {{#each model as |author|}}
-      {{#link-to 'authors.author' author.id class="link-author"}}
-        {{author.username}}
+      Nombre del author:
+      {{#link-to 'authors.author' author.id}}
+      <div class="">
+       {{author.username}}
+      </div>
+      <div class="">
+       {{author.firstName}}
+      </div>
+      <div class="">
+       {{author.lastName}}
+      </div>
+      <div class="">
+       {{author.profilePicture}}
+      </div>
+      <div class="">
+       {{author.email}}
+      </div>
+
+      <br/>
+      <br/>
       {{/link-to}}
     {{/each}}
   </div>
@@ -11,3 +31,4 @@
     {{outlet}}
   </div>
 </div>
+{{outlet}}

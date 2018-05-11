@@ -1,1 +1,39 @@
+<table>
+  <thead>
+    <tr>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>userName</th>
+      <th>email</th>
+      <th>profilePicutre</th>
+      <th>posts</th>
+    </tr>
+  </thead>
+{{#each model as |authors|}}
+    <tbody>
+      <tr>
+        <td>
+          {{#link-to 'authors.author' author.id}}
+            {{author.firstName}}
+          {{/link-to}}
+        </td>
+        <td>
+          {{author.lastName}}
+        </td>
+        <td>
+          {{author.userName}}
+        </td>
+        <td>
+          {{author.email}}
+        </td>
+        <td>
+          {{author.profilePicutre}}
+        </td>
+        <td>
+          {{author.posts}}
+        </td>
+      </tr>
+    </tbody>
+{{/each}}
+</table>
 {{outlet}}
